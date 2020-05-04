@@ -13,7 +13,7 @@ body{
 }
 .btn-secondary{
   background-color: #000051 !important;
-  
+
 }
 .btn-custom{
   background-color: #000051 !important;
@@ -38,6 +38,12 @@ body{
   .btn-custom{
     background-color: #420975 !important;
     color:white;
-
+  }
+  .jumbotron
+  {
+    width: 85%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
