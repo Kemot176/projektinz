@@ -1,3 +1,34 @@
 body{
-  background-color: white;
+  background-color: #420975;
+}
+.info-color{
+  background-color: #420975 !important;
+}
+.jumbotron
+{
+  width: 50%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn-secondary{
+  background-color: #420975 !important;
+  width: 100%;
+}
+.btn-custom{
+  background-color: #420975 !important;
+  color:white;
+
+}
+.table{
+  background-color: white !important;
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.h1
+{
+  text-align: center;
+  color:white;
 }

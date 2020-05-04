@@ -3,26 +3,26 @@
 /*!
  * Material Design for Bootstrap 4
  *   Version: MDB FREE 4.17.0
- * 
- * 
+ *
+ *
  *   Copyright: Material Design for Bootstrap
  *   https://mdbootstrap.com/
- * 
+ *
  *   Read the license: https://mdbootstrap.com/general/license/
- * 
- * 
+ *
+ *
  *   Documentation: https://mdbootstrap.com/
- * 
+ *
  *   Getting started: https://mdbootstrap.com/docs/jquery/getting-started/download/
- * 
+ *
  *   Tutorials: https://mdbootstrap.com/education/bootstrap/
- * 
+ *
  *   Templates: https://mdbootstrap.com/templates/
- * 
+ *
  *   Support: https://mdbootstrap.com/support/
- * 
+ *
  *   Contact: office@mdbootstrap.com
- * 
+ *
  *   Attribution: Animate CSS, Twitter Bootstrap, Materialize CSS, Normalize CSS, Waves JS, WOW JS, Toastr, Chart.js
  */
 .mdb-color.lighten-5 {
@@ -1976,10 +1976,6 @@ a.bg-light:focus,
 button.bg-light:hover,
 button.bg-light:focus {
     background-color: #c7c7c7 !important
-}
-
-.border-light {
-    border-color: #e0e0e0 !important
 }
 
 .card-img-100 {
@@ -9696,8 +9692,6 @@ table.table a.btn.btn-black {
 
 .navbar {
     font-weight: 300;
-    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
 }
 
 .navbar form .md-form input {
