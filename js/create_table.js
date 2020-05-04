@@ -14,10 +14,10 @@ function doTheInsert() {
   var cell2Text  = document.createTextNode('Instytut Informatyki')
   cell2.appendChild(cell2Text);
 
-	var cell_btn  = newRow.insertCell(2);
+  var cell_btn  = newRow.insertCell(2);
 	var input = document.createElement("input");
 	input.type = "button";
-	input.className = "btn btn-custom btn-secondary m-0 px-2";
+	input.className = "btn btn-secondary m-0 px-5";
 	input.value = "EDYTUJ";
 	cell_btn.appendChild(input);
 }

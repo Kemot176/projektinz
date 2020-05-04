@@ -1,34 +1,43 @@
 body{
-  background-color: #420975;
+  background-color: #000051;
 }
 .info-color{
-  background-color: #420975 !important;
+  background-color: #000051 !important;
 }
 .jumbotron
 {
-  width: 50%;
+  width: 70%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
 .btn-secondary{
-  background-color: #420975 !important;
-  width: 100%;
+  background-color: #000051 !important;
+  
 }
 .btn-custom{
-  background-color: #420975 !important;
+  background-color: #000051 !important;
   color:white;
-
+  width: 50%;
 }
 .table{
   background-color: white !important;
-  width: 45%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.h1
-{
+.h1{
   text-align: center;
   color:white;
+}
+@media(max-width: 768px) {
+  h2 {
+    font-size: 1.2rem !important;
+  }
+  .btn-custom{
+    background-color: #420975 !important;
+    color:white;
+
+  }
 }
