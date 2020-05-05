@@ -17,7 +17,7 @@ function doTheInsert() {
   var cell_btn  = newRow.insertCell(2);
 	var input = document.createElement("input");
 	input.type = "button";
-	input.className = "btn btn-secondary m-0 px-5";
+	input.className = "mx-auto btn btn-secondary m-0 px-5";
 	input.value = "EDYTUJ";
 	cell_btn.appendChild(input);
 }

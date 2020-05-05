@@ -13,12 +13,34 @@ body{
 }
 .btn-secondary{
   background-color: #000051 !important;
+}
+.btn-custom {
+  background-color: #000051 !important;
+  color: white;
+  width: 50%;
+  margin: .375rem;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  white-space: normal;
+  cursor: pointer;
+  border: 0;
+  border-radius: .125rem;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  padding: .84rem 2.14rem;
+  font-size: .81rem
 
 }
-.btn-custom{
-  background-color: #000051 !important;
-  color:white;
-  width: 50%;
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active {
+    outline: 0;
+    background-color: #000051 !important;
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
 }
 .table{
   background-color: white !important;
@@ -31,6 +53,12 @@ body{
   text-align: center;
   color:white;
 }
+.navbar-brand:hover,
+.navbar-brand:focus,
+.navbar-brand:active
+{
+  font-size: 26px;
+}
 @media(max-width: 768px) {
   h2 {
     font-size: 1.2rem !important;
@@ -38,6 +66,9 @@ body{
   .btn-custom{
     background-color: #420975 !important;
     color:white;
+  }
+  .btn-secondary{
+    background-color: #000051 !important;
   }
   .jumbotron
   {
