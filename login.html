@@ -43,17 +43,15 @@
   <!-- Content -->
   <div class="container pb-5 pt-5">
     <div class=" animated jumbotron text-center pt-5 fadeInUp">
-      <form class="text-center p-5" action="#!">
-
+      <form id="myForm" name="myForm" method="POST" class="text-center p-5">
         <p class="h4 mb-4">Zaloguj się!</p>
-        <!-- Email -->
-        <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Login">
-
+        <p class="h4 mb-4" id="warningInfo"></p>
+        <!-- Login -->
+        <input type="text" id="name" name="name" class="data-val-required form-control mb-4" placeholder="Login">
         <!-- Password -->
-        <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Hasło">
-
+        <input type="password" id="psswd" name="psswd" class=" data-val-required form-control mb-4" placeholder="Hasło">
         <!-- Sign in button -->
-          <button class="mx-auto btn-custom  m-0 px-2" type="button" id="MaterialButton-addon2">Zaloguj</button>
+        <button class="mx-auto btn-custom m-0 px-2" type="submit" onClick="logInfo();">Zaloguj</button>
     </form>
     </div>
   </div>
@@ -68,7 +66,7 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.js"></script>
   <!-- Your custom scripts (optional) -->
-  <script type="text/javascript"></script>
-
+  <script type="text/javascript"src="js/login.js"></script>
+  <script type="text/javascript"src="js/loggedinfo.js"></script>
 </body>
 </html>

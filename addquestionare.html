@@ -29,9 +29,6 @@
     </button>
     <div class="collapse navbar-collapse pr-5" id="navbarSupportedContent-4">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-            <a class="navbar-brand" href="admin.html" >Panel administratora</a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
@@ -44,39 +41,43 @@
     </div>
   </nav>
   <!-- Content -->
-  <div class="container pb-5 pt-5">
-    <div class=" animated jumbotron text-center pt-5 mb-0 fadeInLeft">
-      <!-- Title -->
-      <h2 class="card-title h2 pb-5  my-4">Wypełnij ankiete</h2>
-      <!-- Subtitle -->
-      <div class="md-form input-group mb-3">
-        <input type="text" class="form-control" placeholder="Tutaj wpisz kod ankiety" aria-label="Recipient's username"
-          aria-describedby="MaterialButton-addon2">
-      </div>
-      <div class="input-group-append pb-5">
-        <button class="mx-auto btn-custom  m-0 px-2" type="button" id="MaterialButton-addon2">Akceptuj</button>
+  <!-- Default form subscription -->
+  <form class="text-center  p-5" action="#!">
+    <div class="container pb-5 pt-5">
+      <h2 class=" h1 pb-5">Nowa ankieta</h2>
+      <div class=" animated jumbotron text-center pt-5 mb-0 fadeInLeft" >
+        <div id="autoUpdate">
+          <div class="md-form">
+            <input type="text" id="form1" class="form-control">
+            <label for="form1">Pytanie</label>
+          </div>
+          <div class="md-form">
+            <input type="text" id="form1" class="form-control">
+            <label for="form1">Opcja pierwsza</label>
+          </div>
+          <div class="md-form">
+            <input type="text" id="form1" class="form-control">
+            <label for="form1">Opcja druga</label>
+          </div>
+          <div class="md-form">
+            <input type="text" id="form1" class="form-control">
+            <label for="form1">Opcja trzecia</label>
+          </div>
+          <div class="md-form">
+            <input type="text" id="form1" class="form-control">
+            <label for="form1">Opcja czwarta</label>
+          </div>
+        </div>
+        <div class="form-check pb-5">
+            <input type="checkbox" class="form-check-input" id="materialUnchecked">
+            <label class="form-check-label" for="materialUnchecked">Odpowiedź własna</label>
+        </div>
+        <button class="btn btn-custom btn-block" type="submit">Dodaj pytanie</button>
       </div>
     </div>
-    <div class=" animated jumbotron text-center pt-5 mb-0 fadeInRight">
-      <!-- Title -->
-      <h2 class="card-title h2 pt-5 pb-5">Wygeneruj kod</h2>
-      <div class="md-form input-group mb-3">
-        <input type="text" class="form-control" placeholder="Tutaj wpisz kod" aria-label="Recipient's username"
-          aria-describedby="MaterialButton-addon2">
-      </div>
-      <div class="input-group-append pb-5">
-        <button class="mx-auto btn-custom  m-0 px-2" type="button" id="MaterialButton-addon2">Generuj</button>
-      </div>
-    </div>
-  </div>
-  <!-- Footer -->
-  <footer class="page-footer font-small unique-color-dark pt-4">
-    <div class="container">
-      <div class=" text-center py-3">© 2020 Copyright
-        <a href="index.html">Dominik Ustupski & Tomasz Siedlecki</a>
-      </div>
-    </div>
-  </footer>
+
+  </form>
+
   <!-- End project -->
 
   <!-- jQuery -->
@@ -88,7 +89,6 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.js"></script>
   <!-- Your custom scripts (optional) -->
-  <script type="text/javascript"></script>
-
+  <script type="text/javascript" src="js/showcontent.js">></script>
 </body>
 </html>
