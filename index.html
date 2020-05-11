@@ -37,7 +37,14 @@
   </nav>
 
   <div class="view-custom-intro">
+    <div id="showInfo" class="text-center alert alert-info alert-dismissible fade show" role="alert">
+      <p><strong>Pomyślnie wygenerowano kod, zapisz go w bezpiecznym miejscu!</strong></p><p id="infoCode"></p>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
     <div class="container text-center">
+
       <div class="animated  text-center pt-5 mb-0 fadeInLeft">
           <h1 class="card-title h1 pt-5 pb-5 my-4">Chcesz anonimowo wypełnić ankietę?</h1>
       </div>
@@ -70,7 +77,6 @@
 
             </ul>
             <!-- /.Stepers Wrapper -->
-
           </div>
         </div>
         <!-- /.Horizontal Steppers -->
@@ -85,12 +91,13 @@
           <div class=" animated jumbotron text-center fadeInLeft">
             <!-- Title -->
             <h4 class="card-title h4 h4-responsive pt-5 pb-5">Posiadasz kod dostępu?</h4>
+            <p class="h4 mb-4 warningInfo" id="warningInfoCode"></p>
             <!-- Subtitle -->
             <div class="md-form input-group mb-3">
-              <input id="QCode" name="QCode" type="text" class="form-control" placeholder="Tutaj wpisz kod ankiety" aria-label="Recipient's username"
+              <input id="QCode" name="QCode" type="text" class="form-control" placeholder="Podaj kod ankiety" aria-label="Recipient's username"
                 aria-describedby="MaterialButton-addon2">
             </div>
-            <div class="input-group-append pb-auto">
+            <div class=" pt-5 input-group-append pb-auto">
               <button class="mx-auto fill m-0 px-2" type="submit" id="MaterialButton-addon2" onclick="CheckCode();">Akceptuj</button>
             </div>
           </div>
@@ -99,14 +106,15 @@
           <div class=" animated jumbotron text-center  fadeInRight">
             <!-- Title -->
             <h4 class="card-title h4 h4-responsive pt-5 pb-5">Posiadasz token?</h4>
+            <p class="h4 mb-4 warningInfo" id="warningInfoToken"></p>
             <div class="md-form input-group mb-3">
-              <input type="text" class="form-control" placeholder="Tutaj wpisz kod" aria-label="Recipient's username"
+              <input id="TCode" name="TCode" type="text" class="form-control" placeholder="Podaj kod token" aria-label="Recipient's username"
                 aria-describedby="MaterialButton-addon2">
             </div>
-            <div class="input-group-append pb-auto">
-              <button class="mx-auto fill m-0 px-2" type="button" id="MaterialButton-addon2">Generuj</button>
+            <div class=" pt-5 input-group-append pb-auto">
+              <button class="mx-auto fill m-0 px-2" type="button" id="MaterialButton-addon2" onclick="createCode();">Generuj</button>
             </div>
-          </div>
+        </div>
         </div>
       </div>
 

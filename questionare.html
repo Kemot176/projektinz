@@ -18,7 +18,7 @@
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
   <!-- Start project -->
   <!-- Navbar -->
   <nav class="mb-1 navbar navbar-expand-lg navbar-dark info-color pb-3" >
@@ -38,11 +38,11 @@
   <!-- Content -->
 
   <div class="container pb-5 pt-5">
-    <h2 class=" h1 pb-5">Nazwa ankiety</h2>
     <div class=" animated jumbotron text-center pt-5 mb-0 fadeInLeft">
       <!-- Subtitle -->
+        <p class="ml-auto mr-auto successInfo text-center" id="infoSuccess"></p>
       <div class="md-form input-group mb-3">
-        <p id="question">Pytanie: </p>
+        <p class="" id="question">Pytanie: </p>
       </div>
       <div class="text-left pb-3">
         <!-- Group of default radios - option 1 -->

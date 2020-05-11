@@ -9718,7 +9718,7 @@ table.table a.btn.btn-black {
 
 .navbar .navbar-toggler {
     border-width: 0;
-    outline: 0
+    outline: 0;
 }
 
 .navbar .nav-flex-icons {
@@ -9899,7 +9899,8 @@ table.table a.btn.btn-black {
 }
 
 .navbar.navbar-dark .navbar-toggler {
-    color: #fff
+    color: #fff;
+    width:auto !important;
 }
 
 .navbar.navbar-dark form .md-form input {
@@ -12142,7 +12143,7 @@ body.scrollable {
 
 footer.page-footer {
     bottom: 0;
-    color: #fff
+    color: #fff;
 }
 
 footer.page-footer .container-fluid {

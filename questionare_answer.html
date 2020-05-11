@@ -27,25 +27,29 @@
       aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse pr-3" id="navbarSupportedContent-4">
+    <div class="collapse navbar-collapse pr-1" id="navbarSupportedContent-4">
       <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+            <a class="navbar-brand" href="admin.html" >Panel administratora</a>
+        </li>
       </ul>
     </div>
   </nav>
   <!-- Content -->
   <div class="container pb-5 pt-5">
-    <div class=" animated jumbotron text-center pt-5 fadeInUp">
-      <form id="myForm" name="myForm" method="POST" class="text-center p-5">
-        <p class="h4 mb-4">Zaloguj się!</p>
-        <p class="h4 mb-4 warningInfo" id="warningInfoL"></p>
-        <!-- Login -->
-        <input type="text" id="name" name="name" class="data-val-required form-control mb-4" placeholder="Login">
-        <!-- Password -->
-        <input type="password" id="psswd" name="psswd" class=" data-val-required form-control mb-4" placeholder="Hasło">
-        <!-- Sign in button -->
-        <button class="mx-auto fill m-0 px-2" type="submit" onClick="logInfo();">Zaloguj</button>
-    </form>
-    </div>
+    <h2 class=" h1 pb-5"> </h2>
+    <table id="myTableAnswer" class="table table-striped btn-table">
+    <thead>
+      <tr>
+        <td style="font-weight: bold"> Pytanie </td>
+        <td style="font-weight: bold"> Odpowiedź </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      </tr>
+    </tbody>
+    </table>
   </div>
 
   <!-- End project -->
@@ -59,7 +63,6 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.js"></script>
   <!-- Your custom scripts (optional) -->
-  <script type="text/javascript"src="js/login.js"></script>
-  <script type="text/javascript"src="js/loggedinfo.js"></script>
+  <script type="text/javascript" src="js/Question_answer.js">></script>
 </body>
 </html>

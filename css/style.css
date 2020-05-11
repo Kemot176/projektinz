@@ -2,6 +2,18 @@ body{
   background-image: url('picture/left.jpg');
   background-repeat: no-repeat; background-size: cover; background-position: center center;
 }
+.click
+{
+  color:#000051 !important;
+}
+#showInfo
+{
+  display: none;
+}
+.page-footer
+{
+  width: 100% !important;
+}
 .view-custom{
   background-image: url('picture/left.jpg');
   background-repeat: no-repeat; background-size: cover; background-position: center center;
@@ -10,7 +22,7 @@ body{
 .view-custom-intro{
   background-image: url('https://images.pexels.com/photos/733852/pexels-photo-733852.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
   background-repeat: no-repeat; background-size: cover; background-position: center center;
-  height:75vh;
+  height:70vh;
   width: 100%;
 }
 .info-color{
@@ -39,6 +51,7 @@ body{
 }
 .btn-secondary{
   background-color: #000051 !important;
+  margin:auto;
 }
 .btn-custom {
 	border:3px solid #000051;
@@ -97,13 +110,29 @@ h2{
   color:green!important;
   font-size: 18px !important;
 }
+.navbar-brand
+{
+  font-size: 18px !important;
+}
 .navbar-brand:hover,
 .navbar-brand:focus,
 .navbar-brand:active
 {
-  font-size: 26px;
+  font-size: 24px !important;
 }
 @media(max-width: 768px) {
+
+  .navbar-brand:hover,
+  .navbar-brand:focus,
+  .navbar-brand:active
+  {
+    font-size: 18px !important;
+  }
+  body{
+    background-color:white !important;
+    background-image: url('');
+    background-repeat: no-repeat; background-size: cover; background-position: center center;
+  }
   .view-custom{
     background-image: url('picture/left.jpg');
     background-repeat: no-repeat; background-size: cover; background-position: center center;

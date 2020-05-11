@@ -1,3 +1,6 @@
+function addUrl(url){
+  window.location.href = url;
+}
 function getName(){
   const urlParams = new URLSearchParams(window.location.search);
   const urlParam = urlParams.get('question');
@@ -129,7 +132,7 @@ function ShowQ() {
       })
       return false
 }
-//WYŚWIETLANIE TOKENÓW I KODÓW
+//WYŚWIETLANIE TOKENOW
 function doTheInsert() {
   const url = "http://mysql26.mydevil.net:7777/token/getAllTokensForQuestionnaire";
   const urlParams1 = new URLSearchParams(window.location.search);
@@ -162,14 +165,19 @@ function doTheInsert() {
                 cell2.appendChild(cell2Text);
 
                 var cell3   = newRow.insertCell(2);
-                if(Used==false)
-                {
-                  var cell3Text  = document.createTextNode("Nie użyto")
+                if(Used==false){
+                  var input = document.createElement("a");
+                  input.setAttribute('class', 'fas fa-times fa-2x');
+                  input.setAttribute('href', '');
                 }
                 else {
-                  var cell3Text  = document.createTextNode("Użyto")
+                  var input = document.createElement("a");
+                  input.setAttribute('class', 'click fas fa-check fa-2x');
+                  input.setAttribute('href', '');
+
                 }
-                cell3.appendChild(cell3Text);
+                cell3.appendChild(input);
+
             }
         })
         .catch(function(err) {
@@ -178,6 +186,7 @@ function doTheInsert() {
 
   }
 }
+//WYŚWIETLANIE KODOW
 function doTheInsertCode() {
   const url = "http://mysql26.mydevil.net:7777/authorizationCode/getAllAuthorizationCodesForQuestionnaire";
   const urlParams = new URLSearchParams(window.location.search);
@@ -210,18 +219,23 @@ function doTheInsertCode() {
                 cell2.appendChild(cell2Text);
 
                 var cell3   = newRow.insertCell(2);
-                if(Used==false)
-                {
-                  var cell3Text  = document.createTextNode("Nie użyto")
+                if(Used==false){
+                  var input = document.createElement("a");
+                  input.setAttribute('class', 'fas fa-times fa-2x');
+                  input.setAttribute('href', '');
                 }
                 else {
-                  var cell3Text  = document.createTextNode("Użyto")
+                  var input = document.createElement("a");
+                  input.setAttribute('class', 'click fas fa-check fa-2x');
+                  input.setAttribute('href', "questionare_answer.html"+"?code="+Name);
+
                 }
-                cell3.appendChild(cell3Text);
+                cell3.appendChild(input);
+
             }
         })
         .catch(function(err) {
-            console.info(err + " url: " + url);
+        console.info(err + " url: " + url);
       });
   }
 }

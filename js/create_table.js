@@ -23,7 +23,7 @@ function doTheInsert() {
         var cell_btn  = newRow.insertCell(2);
         var input = document.createElement("input");
         input.setAttribute('type', 'button');
-        input.setAttribute('class', 'mx-auto btn btn-secondary m-0 px-5');
+        input.setAttribute('class', 'mx-auto btn btn-secondary fill m-0 px-5');
         input.setAttribute('value', 'Więcej');
         input.setAttribute('type', 'submit');
         input.setAttribute('id', Qid);
