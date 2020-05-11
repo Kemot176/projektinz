@@ -27,7 +27,7 @@ function logInfo(){
              sessionStorage.setItem('logged', 'true');
           }
           else {
-            document.getElementById('warningInfo').innerHTML = "Niepoprawny login lub hasło!";
+            document.getElementById('warningInfoL').innerHTML = "Niepoprawny login lub hasło!";
           }
         })
         .catch(error=>{

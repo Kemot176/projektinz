@@ -22,21 +22,13 @@
   <!-- Start project -->
   <!-- Navbar -->
   <nav class="mb-1 navbar navbar-expand-lg navbar-dark info-color pb-3" >
-    <a class="navbar-brand" href="index.html"><i class="fas fa-1x fa-magic  pl-5 pr-2 "></i> AnkietyOnline</a>
+    <a class="navbar-brand" href="index.html"><i class="fas fa-1x fa-magic  pl-1 pr-2 "></i> AnkietyOnline</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
       aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse pr-5" id="navbarSupportedContent-4">
+    <div class="collapse navbar-collapse pr-3" id="navbarSupportedContent-4">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-user"></i> Moje konto </a>
-          <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-            <a class="dropdown-item" href="login.html">Zaloguj</a>
-          </div>
-        </li>
       </ul>
     </div>
   </nav>
@@ -45,13 +37,13 @@
     <div class=" animated jumbotron text-center pt-5 fadeInUp">
       <form id="myForm" name="myForm" method="POST" class="text-center p-5">
         <p class="h4 mb-4">Zaloguj się!</p>
-        <p class="h4 mb-4" id="warningInfo"></p>
+        <p class="h4 mb-4 warningInfo" id="warningInfoL"></p>
         <!-- Login -->
         <input type="text" id="name" name="name" class="data-val-required form-control mb-4" placeholder="Login">
         <!-- Password -->
         <input type="password" id="psswd" name="psswd" class=" data-val-required form-control mb-4" placeholder="Hasło">
         <!-- Sign in button -->
-        <button class="mx-auto btn-custom m-0 px-2" type="submit" onClick="logInfo();">Zaloguj</button>
+        <button class="mx-auto fill m-0 px-2" type="submit" onClick="logInfo();">Zaloguj</button>
     </form>
     </div>
   </div>

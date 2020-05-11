@@ -21,52 +21,95 @@
 <body>
   <!-- Start project -->
   <!-- Navbar -->
-  <nav class="mb-1 navbar navbar-expand-lg navbar-dark info-color pb-3" >
-    <a class="navbar-brand" href="index.html"><i class="fas fa-1x fa-magic  pl-5 pr-2 "></i> AnkietyOnline</a>
+  <nav class=" navbar navbar-expand-lg navbar-dark info-color pb-3" >
+    <a class="navbar-brand" href="index.html"><i class="fas fa-1x fa-magic  pl-1 pr-2 "></i> AnkietyOnline</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
       aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse pr-5" id="navbarSupportedContent-4">
+    <div class="collapse navbar-collapse pr-1" id="navbarSupportedContent-4">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
             <a class="navbar-brand" href="admin.html" >Panel administratora</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-user"></i> Moje konto </a>
-          <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-            <a class="dropdown-item" href="login.html">Zaloguj</a>
-          </div>
-        </li>
       </ul>
     </div>
   </nav>
-  <!-- Content -->
-  <div class="container pb-5 pt-5">
-    <div class=" animated jumbotron text-center pt-5 mb-0 fadeInLeft">
-      <!-- Title -->
-      <h2 class="card-title h2 pb-5  my-4">Wypełnij ankiete</h2>
-      <!-- Subtitle -->
-      <div class="md-form input-group mb-3">
-        <input type="text" class="form-control" placeholder="Tutaj wpisz kod ankiety" aria-label="Recipient's username"
-          aria-describedby="MaterialButton-addon2">
+
+  <div class="view-custom-intro">
+    <div class="container text-center">
+      <div class="animated  text-center pt-5 mb-0 fadeInLeft">
+          <h1 class="card-title h1 pt-5 pb-5 my-4">Chcesz anonimowo wypełnić ankietę?</h1>
       </div>
-      <div class="input-group-append pb-5">
-        <button class="mx-auto btn-custom  m-0 px-2" type="button" id="MaterialButton-addon2">Akceptuj</button>
+      <div class="animated  text-center  mb-0 fadeInRight">
+        <div class="row">
+          <div class="col-md-12">
+            <!-- Stepers Wrapper -->
+            <ul class="stepper stepper-horizontal">
+              <!-- First Step -->
+              <li class="completed">
+                <a>
+                  <span class="circle">1</span>
+                  <span class="label">Wpisz token</span>
+                </a>
+              </li>
+              <!-- Second Step -->
+              <li class="active">
+                <a >
+                  <span class="circle">2</span>
+                  <span class="label">Wygeneruj kod</span>
+                </a>
+              </li>
+              <!-- Third Step -->
+              <li class="active">
+                <a >
+                  <span class="circle"><i class="far fa-smile-beam fa-spin"></i></span>
+                  <span class="label">Wypełnij ankiete</span>
+                </a>
+              </li>
+
+            </ul>
+            <!-- /.Stepers Wrapper -->
+
+          </div>
+        </div>
+        <!-- /.Horizontal Steppers -->
       </div>
     </div>
-    <div class=" animated jumbotron text-center pt-5 mb-0 fadeInRight">
-      <!-- Title -->
-      <h2 class="card-title h2 pt-5 pb-5">Wygeneruj kod</h2>
-      <div class="md-form input-group mb-3">
-        <input type="text" class="form-control" placeholder="Tutaj wpisz kod" aria-label="Recipient's username"
-          aria-describedby="MaterialButton-addon2">
+  </div>
+  <!-- Content -->
+  <div class="view-custom">
+    <div class="container pb-5 pt-5">
+      <div class="row">
+        <div class="col-lg">
+          <div class=" animated jumbotron text-center fadeInLeft">
+            <!-- Title -->
+            <h4 class="card-title h4 h4-responsive pt-5 pb-5">Posiadasz kod dostępu?</h4>
+            <!-- Subtitle -->
+            <div class="md-form input-group mb-3">
+              <input id="QCode" name="QCode" type="text" class="form-control" placeholder="Tutaj wpisz kod ankiety" aria-label="Recipient's username"
+                aria-describedby="MaterialButton-addon2">
+            </div>
+            <div class="input-group-append pb-auto">
+              <button class="mx-auto fill m-0 px-2" type="submit" id="MaterialButton-addon2" onclick="CheckCode();">Akceptuj</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg">
+          <div class=" animated jumbotron text-center  fadeInRight">
+            <!-- Title -->
+            <h4 class="card-title h4 h4-responsive pt-5 pb-5">Posiadasz token?</h4>
+            <div class="md-form input-group mb-3">
+              <input type="text" class="form-control" placeholder="Tutaj wpisz kod" aria-label="Recipient's username"
+                aria-describedby="MaterialButton-addon2">
+            </div>
+            <div class="input-group-append pb-auto">
+              <button class="mx-auto fill m-0 px-2" type="button" id="MaterialButton-addon2">Generuj</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="input-group-append pb-5">
-        <button class="mx-auto btn-custom  m-0 px-2" type="button" id="MaterialButton-addon2">Generuj</button>
-      </div>
+
     </div>
   </div>
   <!-- Footer -->
@@ -88,7 +131,7 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.js"></script>
   <!-- Your custom scripts (optional) -->
-  <script type="text/javascript"></script>
+  <script type="text/javascript" src="js/Question.js"></script>
 
 </body>
 </html>
