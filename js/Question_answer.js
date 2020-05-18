@@ -39,4 +39,25 @@ function showAnswers(){
       });
   }
 }
+function showCode(){
+  const url = "http://mysql26.mydevil.net:7777/authorizationCode/getEncryptedUserResponse";
+  let code = getCode();
+  const other_param = {
+    headers : { "content-type" : "application/json"},
+    body : code,
+    method : "POST"
+  };
+  console.log(other_param);
+  console.log(code);
+  fetch(url,other_param)
+    .then(resp => resp.text())
+    .then(resp => {
+        document.getElementById("authCode").innerHTML=resp;
+        console.log(resp);
+    })
+    .catch(function(err) {
+      console.info(err);
+  });
+}
+showCode();
 showAnswers();

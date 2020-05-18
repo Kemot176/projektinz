@@ -1,6 +1,5 @@
 body{
-  background-image: url('picture/left.jpg');
-  background-repeat: no-repeat; background-size: cover; background-position: center center;
+
 }
 .click
 {
@@ -13,6 +12,9 @@ body{
 #showInfo
 {
   display: none;
+}
+#authCode{
+  text-align: center !important;
 }
 .page-footer
 {

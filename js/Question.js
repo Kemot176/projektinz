@@ -139,36 +139,31 @@ function showEnd(){
   x.innerHTML="Wyślij";
   x.setAttribute( "onClick", "endQ();" );
   var z = document.getElementById("infoSuccess");
-  document.getElementById("answers").style.display="block";
+  document.getElementById("answers").style.display="table";
   showAnswers();
   z.innerHTML="Pomyślnie wypełniłeś ankiete, aby potwierdzić odpowiedzi naciśnij wyślij";
 }
 
 function endQ(){
-  //sessionStorage.clear();
+  sessionStorage.clear();
   const url = "http://mysql26.mydevil.net:7777/authorizationCode/getEncryptedUserResponse";
   let code = getCode();
   const other_param = {
     headers : { "content-type" : "application/json"},
-    body : JSON.stringify(code),
+    body : code,
     method : "POST"
   };
   console.log(other_param);
   console.log(code);
-
-  if(code)
-  {
-    fetch(url,other_param)
-      .then(resp => resp.json())
-      .then(resp => {
-        console.log(resp);
-      })
-      .catch(function(err) {
+  fetch(url,other_param)
+    .then(resp => resp.text())
+    .then(resp => {
+        window.location.href = "confirmation.html"+"?auth="+resp;
+    })
+    .catch(function(err) {
       console.info(err);
-      });
-  }
+  });
 }
-
 function createCode(){
     const url = "http://mysql26.mydevil.net:7777/token/createAndGetAuthorizationCode";
     const code = document.getElementById('TCode').value;
