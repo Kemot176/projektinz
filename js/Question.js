@@ -139,12 +139,34 @@ function showEnd(){
   x.innerHTML="Wyślij";
   x.setAttribute( "onClick", "endQ();" );
   var z = document.getElementById("infoSuccess");
+  document.getElementById("answers").style.display="block";
+  showAnswers();
   z.innerHTML="Pomyślnie wypełniłeś ankiete, aby potwierdzić odpowiedzi naciśnij wyślij";
 }
 
 function endQ(){
-  sessionStorage.clear();
-  window.location.href = "index.html";
+  //sessionStorage.clear();
+  const url = "http://mysql26.mydevil.net:7777/authorizationCode/getEncryptedUserResponse";
+  let code = getCode();
+  const other_param = {
+    headers : { "content-type" : "application/json"},
+    body : JSON.stringify(code),
+    method : "POST"
+  };
+  console.log(other_param);
+  console.log(code);
+
+  if(code)
+  {
+    fetch(url,other_param)
+      .then(resp => resp.json())
+      .then(resp => {
+        console.log(resp);
+      })
+      .catch(function(err) {
+      console.info(err);
+      });
+  }
 }
 
 function createCode(){
@@ -161,12 +183,17 @@ function createCode(){
       fetch(url,other_param)
         .then(resp => resp.json())
         .then(data => {
-          document.getElementById("infoCode").innerHTML = data;
-          var y = document.getElementById("showInfo");
-          y.style.display ="block";
-          scroll(0,0);
+          if(!data.error)
+          {
+            document.getElementById("infoCode").innerHTML = data;
+            var y = document.getElementById("showInfo");
+            y.style.display ="block";
+            scroll(0,0);
+          }
+          else {
+            document.getElementById('warningInfoToken').innerHTML = "Niepoprawny bądź użyty token";
+          }
         })
-
     }
     else {
         document.getElementById('warningInfoToken').innerHTML = "Pole nie może być puste";
@@ -176,4 +203,37 @@ showQuestion();
 function noBack()
 {
     window.history.forward();
+}
+function showAnswers(){
+  const url = "http://mysql26.mydevil.net:7777/userAnswer/getAllUserAnswerForQuestionnaire";
+  const code = getCode();
+  const other_param = {
+    headers : { "content-type" : "application/json"},
+    body : code,
+    method : "POST"
+  };
+  if(code)
+  {
+    fetch(url,other_param)
+      .then(resp => resp.json())
+      .then(resp => {
+        var lenght = Object.keys(resp).length;
+        for(let i = 0; i< resp.length; i++) {
+          var Name = resp[i].questio;
+          var Answer = resp[i].userAnswerLong;
+
+          var newRow= document.getElementById('answers').insertRow();
+          var cell1   = newRow.insertCell(0);
+          var cell1Text  = document.createTextNode(Name)
+          cell1.appendChild(cell1Text);
+
+          var cell2   = newRow.insertCell(1);
+          var cell2Text  = document.createTextNode(Answer)
+          cell2.appendChild(cell2Text);
+        }
+      })
+      .catch(function(err) {
+      console.info(err + " url: " + url);
+      });
+  }
 }

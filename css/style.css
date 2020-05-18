@@ -6,6 +6,10 @@ body{
 {
   color:#000051 !important;
 }
+#answers
+{
+  display: none;
+}
 #showInfo
 {
   display: none;
