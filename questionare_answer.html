@@ -50,8 +50,35 @@
       </tr>
     </tbody>
     </table>
-    <p class="font-weight-bold" id="authCode"></p>
   </div>
+  <div class="container mt-5 pt-3 pb-5 text-center">
+    <section class="">
+      <div class="row">
+        <div class="col-lg-5 col-md-12 mb-lg-0 mb-4">
+          <div class="view overlay rounded z-depth-1 mb-lg-0 mb-4">
+              <img src="" class="pt-3 pb-3 ml-auto mr-auto" alt="QR_Code" title="" id="QRimg"/> </img>
+            <a><div class="mask rgba-white-slight"></div></a>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-6 mb-md-0 mb-4 mt-xl-4">
+           <h3 class="font-weight-normal mb-4">Do czego służy kod QR / szyfr?</h3>
+           <p class="text-muted"> Szyfr powstaje w oparciu o algorytm kryptograficzny SHA-256.
+            Jest generowany przy każdorazowym wybieraniu twoich odpowiedzi z bazy danych.
+            W wyniku jakichkolwiek ingerencji w twoje odpowiedzi, zmiania nastąpi również w kodzie zabezpieczającym.</p>
+            <p class="text-muted"> Dzięki jego znajomości mozna odtworzyć oryginalne odpowiedzi, a także poprzez porównanie aktualnego kodu i wygenerowanego
+            podczas wysłania ankiety sprawdzić czy ktoś nie ingerował w odpowiedzi.</p>
+            <p id="pQR" class="font-weight-bold"></p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="page-footer font-small unique-color-dark pt-4">
+    <div class="container">
+      <div class=" text-center py-3">© 2020 Copyright
+        <a href="index.html">Dominik Ustupski & Tomasz Siedlecki</a>
+      </div>
+    </div>
+  </footer>
 
   <!-- End project -->
 

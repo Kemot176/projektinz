@@ -5,6 +5,9 @@ body{
 {
   color:#000051 !important;
 }
+img{
+  display: flex;
+}
 #answers
 {
   display: none;
@@ -13,9 +16,7 @@ body{
 {
   display: none;
 }
-#authCode{
-  text-align: center !important;
-}
+
 .page-footer
 {
   width: 100% !important;
@@ -127,7 +128,9 @@ h2{
   font-size: 24px !important;
 }
 @media(max-width: 768px) {
-
+  #authCode{
+    width: 10vh;
+  }
   .navbar-brand:hover,
   .navbar-brand:focus,
   .navbar-brand:active

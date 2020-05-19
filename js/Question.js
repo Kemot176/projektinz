@@ -1,13 +1,17 @@
 let q = 0;
 let lenght = 0;
 
+function noBack()
+{
+    window.history.forward();
+}
+
 function getCode(){
   const urlParams = new URLSearchParams(window.location.search);
   const urlParam = urlParams.get('code');
   let evPar = parseInt(urlParam);
   return evPar;
 }
-
 function CheckCode(){
   const url = "http://mysql26.mydevil.net:7777/authorizationCode/getAuthorizationCode";
   const code = document.getElementById('QCode').value;
@@ -44,6 +48,31 @@ function CheckCode(){
 }
 
 function showQuestion(){
+  if(q==1)
+  {
+    const url = "http://mysql26.mydevil.net:7777/authorizationCode/getAuthorizationCode";
+    let code = getCode();
+    const other_param = {
+      headers : { "content-type" : "application/json"},
+      body : code,
+      method : "POST",
+      mode : "cors"
+    };
+    if(code)
+    {
+      fetch(url,other_param)
+        .then(resp => resp.json())
+        .then(data => {
+          if(data==true)
+          {
+            endQ();
+          }
+        })
+        .catch(function(err) {
+        console.info(err + " url: " + url);
+        });
+    }
+  }
   const url = "http://mysql26.mydevil.net:7777/question/getAllQuestionForQuestionnaire";
   let code = getCode();
   const other_param = {
@@ -60,13 +89,16 @@ function showQuestion(){
         lenght = Object.keys(resp).length;
         if(q==lenght)
         {
-          console.log("end");
           showEnd();
+
         }
         else {
           updateQ(resp[q].titleQuestion, resp[q].answerA, resp[q].answerB, resp[q].answerC,resp[q].answerD);
           sessionStorage.setItem('question',  resp[q].questionId);
           q++;
+
+          let count = q;
+          document.getElementById("CountQ").innerHTML="Pytanie: "+ count+" / "+ lenght;
         }
       })
       .catch(function(err) {
@@ -100,7 +132,6 @@ function nextQ(){
       break;
     }
   }
-
   //wysłanie odpowiedzi
   const url = "http://mysql26.mydevil.net:7777/userAnswer/addUserAnswer";
   let code = getCode();
@@ -115,7 +146,6 @@ function nextQ(){
   {
   fetch(url, { method: 'POST',   body : formData})
     .then(response => {
-      console.log("Send");
     })
     .catch(function(err) {
       console.info(err + " url: " + url);
@@ -123,13 +153,14 @@ function nextQ(){
     showQuestion();
   }
 }
-
 function showEnd(){
   document.getElementById("question").innerHTML = "";
   document.getElementById("answer1").innerHTML = "";
   document.getElementById("answer2").innerHTML = "";
   document.getElementById("answer3").innerHTML = "";
   document.getElementById("answer4").innerHTML = "";
+  document.getElementById("CountQ").innerHTML= " ";
+
   var x = document.getElementsByClassName("custom-control-label");
   var i;
   for (i = 0; i < x.length; i++) {
@@ -194,11 +225,6 @@ function createCode(){
         document.getElementById('warningInfoToken').innerHTML = "Pole nie może być puste";
     }
 }
-showQuestion();
-function noBack()
-{
-    window.history.forward();
-}
 function showAnswers(){
   const url = "http://mysql26.mydevil.net:7777/userAnswer/getAllUserAnswerForQuestionnaire";
   const code = getCode();
@@ -232,3 +258,4 @@ function showAnswers(){
       });
   }
 }
+showQuestion();

@@ -19,6 +19,7 @@ function showAnswers(){
     fetch(url,other_param)
       .then(resp => resp.json())
       .then(resp => {
+        console.log(resp);
         var lenght = Object.keys(resp).length;
         for(let i = 0; i< resp.length; i++) {
           var Name = resp[i].questio;
@@ -38,6 +39,9 @@ function showAnswers(){
       console.info(err + " url: " + url);
       });
   }
+  else {
+      window.location.href = "index.html";
+  }
 }
 function showCode(){
   const url = "http://mysql26.mydevil.net:7777/authorizationCode/getEncryptedUserResponse";
@@ -47,17 +51,20 @@ function showCode(){
     body : code,
     method : "POST"
   };
-  console.log(other_param);
-  console.log(code);
   fetch(url,other_param)
     .then(resp => resp.text())
     .then(resp => {
-        document.getElementById("authCode").innerHTML=resp;
-        console.log(resp);
+      if(resp){
+        let Curl = "https://api.qrserver.com/v1/create-qr-code/?data="+resp+"&amp;size=100x100";
+        document.getElementById("QRimg").src= Curl;
+        document.getElementById("QRimg").alt= resp;
+        document.getElementById("pQR").innerHTML = resp;
+      }
     })
     .catch(function(err) {
       console.info(err);
   });
 }
+
 showCode();
 showAnswers();
